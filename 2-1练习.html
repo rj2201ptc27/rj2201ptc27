@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+</head>
+
+<body>
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            backgroundColor: '#2c343c',
+            title: {
+                text: '这是主标题',
+                textStyle: {
+                    color: '#fff'
+                },
+                subtext: '这是副标题',
+                subtextStyle: {
+                    color: '#bbb'
+                },
+                padding: [10, 0, 100, 100]
+            },
+            length: {
+                type: 'plain',
+                top: '1%',
+                selected: {
+                    '销售': true,
+                },
+                textStyle: {
+                    color: '#fff',
+                    backgroundColor: 'black'
+                },
+                tooltip: {
+                    show: true,
+                    color: 'red'
+                },
+                data: [
+                    {
+                        name: '销售',
+                        icon: 'circle',
+                        textStyle: {
+                            color: '#fff',
+                            backgroundColor: 'black',
+                        }
+                    }
+                ],
+            },
+            tooltip: {
+                show: true,
+                trigger: 'item',
+                axisPointer: {
+                    type: 'shadow',
+                    axis: 'auto',
+                },
+                padding: 5,
+                textStyle: {
+                    color: '#fff',
+                },
+            },
+            grid: {
+                show: false,
+                top: 80,
+                containLabel: false,
+                tooltip: {
+                    show: true,
+                    trigger: 'item',
+                    textStyle: {
+                        color: '#fff666',
+                    }
+                }
+            },
+            xAxis: {
+                show: true,
+                position: 'bottom',
+                offset: 0,
+                type: 'category',
+                name: '月份',
+                nameLocation: 'end',
+                nameTextStyle: {
+                    color: '#fff',
+                    padding: [5, 0, 0, -5],
+                },
+                nameGap: 15,
+                nameRotate: 270,
+                axisLine: {
+                    show: true,
+                    Symbol: ['none', 'arrow'],
+                    SymbolSize: [8, 8],
+                    SymbolOffset: [0, 7],
+                    lineStyle: {
+                        color: '#fff',
+                        width: 1,
+                        type: 'solid',
+                    },
+                },
+                axisTick: {
+                    show: true,
+                    inside: true,
+                    length: 3,
+                    lineStyle: {
+                        color: 'yellow',
+                        width: 1,
+                        type: 'solod',
+                    },
+                },
+                axisLabel: {
+                    show: true,
+                    inside: false,
+                    rotate: 0,
+                    margin: 5,
+                },
+                color: 'red',
+                splitLine: {
+                    show: false,
+                    lineStyle: {
+                        color: 'red',
+                        width: 1,
+                        type: 'solid',
+                    },
+                },
+                splitArea: {
+                    show: false,
+                },
+                data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+            },
+            yAxis:{
+                show:true,
+                position:'left',
+                offset:0,
+                type:'value',
+                name:'销量',
+                nameLocation:'end',
+                nameTextStyle:{
+                    color:'#fff',
+                    padding:[5,0,0,5],
+                },
+                nameGap:15,
+                nameRotate:0,
+                axisLine:{
+                    show:true,
+                    Symbol:['none','arrow'],
+                    SymbolSize:[8,8],
+                    SymbolOffset:[0,7],
+                    lineStyle:{
+                        color:'#fff',
+                        width:1,
+                        type:'solid',
+                    },
+                },
+                axisTick:{
+                    show:true,
+                    inside:true,
+                    length:3,
+                    lineStyle:{
+                        width:1,
+                        type:'solod',
+                    },
+                },
+                axisLabel:{
+                    show:true,
+                    inside:false,
+                    rotate:0,
+                    margin:8,
+                    color:'red',
+                },
+                splitLine:{
+                    show:true,
+                    lineStyle:{
+                        color:'#666',
+                        width:1,
+                        type:'dashed',
+                    },
+                },
+                splitArea:{
+                    show:false,
+                },
+            },
+            series:[{
+                name:'销量',
+                type:'bar',
+                legendHoverLink:true,
+                label:{
+                    show:false,
+                    position:'insideTop',
+                    rotate:0,
+                    color:'#eee',
+                },
+                itemStyle:{
+                    color:'blue',
+                    barBorderRadius:[18,18,0,0],
+                },
+                barWidth:'20',
+                barCategoryGap:'20%',
+                data:[3020,4800,3600,6050,4320,6200,5050,7200,4521,6700,8000,5020]
+            }]
+
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>
