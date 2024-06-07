@@ -1,0 +1,27 @@
+.itd:hover .tx {
+  height: 50px;
+  transition: all 2s;
+  line-height: 50px;
+}
+.itd:hover .tx img {
+  transition: all 2s;
+  width: 40px;
+  left: 5px;
+  transform: translate(0%, -50%);
+}
+.itd:hover .mz {
+  transition: all 2s;
+  height: 200px;
+}
+.itd:hover .dsj1 {
+  transition: all 2s;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.itd:hover .xx {
+  display: none;
+}
+.itd:hover .xinx {
+  display: block;
+}

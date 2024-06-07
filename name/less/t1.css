@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body div .nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+body div .nav li a {
+  color: white;
+}
+
+body div .nav li a:hover {
+  color: black;
+}
+
+body .nav-pills>li>a {
+  border-radius: 20px;
+}
+
+body .nav-pills>li.active>a,
+body .nav-pills>li.active>a:focus,
+body .nav-pills>li.active>a:hover {
+  color: black;
+  background-color: white;
+}
+
+body #bj1 {
+  width: 100vw;
+  height: 100vh;
+  background: url("../img/bj1.jpg") no-repeat 0px 0px;
+  background-size: 100vw 100vh;
+  float: right;
+}
+
+p {
+  font-size: 5rem;
+  font-family: 微软雅黑;
+}
+
+.bj2 {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}

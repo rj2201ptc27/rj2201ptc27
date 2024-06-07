@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+.btm_box {
+    position: relative;
+    padding: 20px;
+    /* padding-top: 20px; */
+    top: -20px;
+}
+
+.btm_box .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btm_box .top .left {
+    width: 40px;
+    height: 40px;
+}
+
+/* .btm_box .top .right {
+    width: 620px;
+} */
+
+.btm_box .top .right li:first-child {
+    font-size: 14px;
+    font-weight: 1000;
+}
+
+.btm_box .top .right li {
+    font-size: 12px;
+    line-height: 25px;
+    overflow: hidden;
+}
+
+.btm_box .top .right li span {
+    float: right;
+}
+
+.btm_box .foot {
+    width: 85%;
+    height: 5px;
+    background-color: rgba(90, 117, 224, 0.1);
+    border-radius: 6px;
+}
+
+.btm_box .foot .run {
+    border-radius: 6px;
+    height: 5px;
+    background-color: rgba(90, 117, 224, 1);
+}
+
+.btm_box {
+    width: 700px;
+    /* height: 80px; */
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.roundabout_box ul li audio {
+    position: absolute;
+    top: -60px;
+    left: 0;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #10B1EE, #8A91EF, #E870A2, #FF605A);
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ul,
+li,
+dd,
+dl,
+dt,
+img {
+    list-style: none;
+}
+
+legend {
+    display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: lighter;
+    font-size: 100%;
+}
+
+body,
+div {
+    color: #555555;
+    font-size: 12px;
+    font-family: 微软雅黑;
+    -webkit-text-size-adjust: none;
+}
+
+.time {
+    font-size: 12px;
+    font-family: '宋体', Simsun;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link,
+a:visited {
+    color: #111111;
+}
+
+a:active,
+a:hover {
+    color: #ff0000;
+}
+
+a.white:link,
+a.white:visited {
+    color: #ffffff;
+}
+
+a.white:active,
+a.white:hover {
+    color: #ffff00;
+}
+
+a.hui:link,
+a.hui:visited {
+    color: #999999;
+}
+
+a.hui:active,
+a.hui:hover {
+    color: #ffff00;
+}
+
+a.huii:link,
+a.huii:visited {
+    color: #555555;
+}
+
+a.huii:active,
+a.huii:hover {
+    color: #999999;
+}
+
+a.hong:link,
+a.hong:visited {
+    color: #cc0000;
+}
+
+a.hong:active,
+a.hong:hover {
+    color: #000000;
+}
+
+a.lan:link,
+a.lan:visited {
+    color: #003366;
+}
+
+a.lan:active,
+a.lan:hover {
+    color: #ff0000;
+}
+
+
+.exhibition_hall {
+    /* text-align: center; */
+    position: relative;
+    overflow: hidden;
+    padding-top: 30px;
+}
+
+.exhibition_hall h4 {
+    font-size: 30px;
+    font-family: "微软雅黑";
+    text-align: center;
+    margin: 0px auto;
+    padding-top: 50px;
+    color: #000;
+}
+
+.tline {
+    color: #dedede;
+}
+
+.roundabout_box {
+    /* width: 980px;*/
+    height: 700px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.roundabout_box ul li {
+    border-radius: 15px;
+}
+
+.roundabout_box ul li:first-child {
+    background: url(../img/bj.jpg) no-repeat;
+    background-size: cover;
+}
+
+.roundabout_box ul li:nth-child(2) {
+    background: url(../img/bj1.jpg) no-repeat;
+    background-size: cover;
+}
+
+.roundabout_box ul li:last-child {
+    background: url(../img/bj2.png) no-repeat;
+    background-size: cover;
+}
+
+
+.roundabout_box img {
+    width: 100%;
+}
+
+
+.roundabout-holder {
+    list-style: none;
+    width: 500px;
+    height: 425px;
+    margin: 0px auto;
+}
+
+.roundabout-moveable-item {
+    font-size: 12px !important;
+    height: 425px;
+    width: 650px;
+    cursor: pointer;
+}
+
+.roundabout-moveable-item img {
+    height: 100%;
+    width: 100%;
+    /* background-color: #FFFFFF; */
+    margin: 0;
+    border-radius: 15px;
+}
+
+.roundabout-in-focus {
+    cursor: auto;
+}
+
+.roundabout-in-focus000:hover {
+    -webkit-box-shadow: 0px 0px 20px #787878;
+    -moz-box-shadow: 0px 0px 20px #787878;
+    background: #f9f9f9;
+}
+
+.roundabout-holder .text {
+    color: #999;
+}
+
+.roundabout-in-focus000:hover span {
+    display: inline;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 8px 20px;
+    background: #f9f9f9;
+    color: #3366cc;
+    z-index: 999;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius-topLeft: 5px;
+    border-left: 1px solid #aaaaaa;
+    border-top: 1px solid #aaaaaa;
+}
+
+.roundabout a:active,
+.roundabout a:focus,
+.roundabout a:visited {
+    outline: none;
+    text-decoration: none;
+}
+
+.roundabout li {
+    margin: 0
+}

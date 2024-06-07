@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	
+	<script src="../bootstrap-3.4.1-dist/js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="../bootstrap-3.4.1-dist/js/jquery.fancybox.pack.js"></script>
+</head>
+<link rel="stylesheet" href="../layui/css/layui.css">
+<link href="../css/yy.css" rel="stylesheet" type="text/css">
+<body>
+	<div id="bj1">
+		<div>
+			<ul class="layui-nav bj ">
+				<li class="layui-nav-item">
+					<a href="首页.html">首页</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="../html/剧情介绍.html">剧情介绍</a>
+				</li>
+				<li class="layui-nav-item"><a href="../html/人物卡片.html">人物介绍</a></li>
+				<li class="layui-nav-item layui-this"><a href="../html/音乐.html">音乐</a></li>
+				<li class="layui-nav-item"><a href="../html/图片欣赏.html">图片欣赏</a></li>
+				<li class="layui-nav-item" lay-unselect>
+					<a href="javascript:;">
+						<img src="../img/1.JPG" class="layui-nav-img">
+					</a>
+					<dl class="layui-nav-child">
+						<dd><a href="../html/作者.html">查看作者</a></dd>
+						<hr>
+						<dd style="text-align: center;"><a href="../你的名字.html">退出</a></dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="exhibition_hall">
+		<div id="" class="roundabout_box">
+
+			<ul>
+				<li><audio src="../music/rad1.mp3" controls="controls" ontimeupdate="updata(this)"></audio></li>
+				<li><audio src="../music/rad2.mp3" controls="controls" ontimeupdate="updata(this)"></audio></li>
+				<li><audio src="../music/rad3.mp3" controls="controls" ontimeupdate="updata(this)"></audio></li>
+			</ul>
+
+			<div class="btm_box">
+
+				<div class="top">
+
+					<div class="left">
+						<img src="../img/bof.gif" alt="">
+					</div>
+					<div class="foot">
+						<div class="run" style="width:50%"></div>
+					</div>
+					
+					<div class="right">
+						<span class="time">8:20</span>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+		<script src="../bootstrap-3.4.1-dist/js/jquery.roundabout.min.js"></script>
+		<script type="text/javascript">
+			function updata(audio) {
+				const minutes = parseInt(audio.duration / 60, 10);
+				const seconds = parseInt(audio.duration % 60);
+				$(".time").html(minutes + ":" + seconds)
+				$(".foot .run").css("width", (audio.currentTime / audio.duration) * 100 + "%")
+			}
+			$("ul li").click((e) => {
+				document.querySelectorAll("ul li").forEach(es => {
+					es.childNodes.forEach((ew) => {
+						if (ew.src) {
+							ew.pause();
+						}
+					})
+				});
+				e.target.childNodes.forEach((ew) => {
+					if (ew.src) {
+						ew.play();
+					}
+				})
+
+			})
+			$(document).ready(function () {
+				$('.roundabout_box ul').roundabout({
+					duration: 1000,
+					minScale: 0.6,
+					autoplay: false,
+					// autoplayDuration: 5000,
+					minOpacity: 0,
+					maxOpacity: 1,
+					reflect: false,
+					startingChild: 3,
+					// autoplayInitialDelay: 5000,
+					// autoplayPauseOnHover: true,
+					enableDrag: true
+				});
+			});
+		</script>
+</body>
+<script src="../layui/layui.js"></script>
+
+</html>

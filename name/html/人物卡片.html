@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+</head>
+<style>
+    * {
+        /* 初始化 */
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        /* 100%窗口高度 */
+        height: 100vh;
+        /* 弹性布局 水平+垂直居中 */
+        /* 渐变背景 */
+        background-image: linear-gradient(to bottom, #10B1EE, #8A91EF, #E870A2, #FF605A);
+    }
+
+    .card {
+        /* 相对定位 */
+        position: relative;
+        width: 300px;
+        height: 450px;
+        margin: 20px;
+        background-color: #758a99;
+        border-radius: 20px;
+        /* 溢出隐藏 */
+        overflow: hidden;
+        /* 弹性布局 */
+        display: flex;
+        /* 元素纵向排列 */
+        flex-direction: column;
+        /* 居中 */
+        align-items: center;
+        color: #fff;
+        /* 阴影 */
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        /* 不让其被挤压 */
+        flex-shrink: 0;
+        
+
+    }
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70px;
+    }
+
+    .card .photo img {
+        width: 100%;
+        height: 100%;
+        /* 保持原有尺寸比例，裁切长边 */
+        object-fit: cover;
+    }
+
+    /* 默认大图 */
+    .card .photo {
+        /* 绝对定位 */
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0%;
+        overflow: hidden;
+        /* 动画过渡 */
+        transition: 0.5s;
+    }
+
+    /* 鼠标移入变小图 */
+    .card:hover .photo {
+        top: 30px;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+
+    /* 这里加个黑色到透明的渐变背景，可以更好的看清楚名字 */
+    .card .photo::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, transparent 50%, #222);
+    }
+
+    .card h1 {
+        position: absolute;
+        top: 370px;
+        transition: 0.5s;
+    }
+
+    .card:hover h1 {
+        top: 170px;
+    }
+
+    .card h2 {
+        margin-top: 220px;
+        width: 80%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    .card p {
+        width: 90%;
+        text-indent: 32px;
+        font-size: 10px;
+        margin-bottom: 15px;
+        line-height: 30px;
+    }
+
+    .card a {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 8px 32px;
+        border-radius: 8px;
+    }
+
+    .card a:hover {
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    a>img {
+        width: 40px;
+    }
+</style>
+
+<body>
+    <div id="bj1">
+        <div>
+            <ul class="layui-nav bj ">
+                <li class="layui-nav-item">
+                    <a href="首页.html">首页</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="../html/剧情介绍.html">剧情介绍</a>
+                </li>
+                <li class="layui-nav-item  layui-this"><a href="../html/人物卡片.html">人物介绍</a></li>
+                <li class="layui-nav-item"><a href="../html/音乐.html">音乐</a></li>
+                <li class="layui-nav-item"><a href="../html/图片欣赏.html">图片欣赏</a></li>
+                <li class="layui-nav-item" lay-unselect>
+                    <a href="javascript:;">
+                        <img src="../img/1.JPG" class="layui-nav-img">
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="../html/作者.html">查看作者</a></dd>
+                        <hr>
+                        <dd style="text-align: center;"><a href="../你的名字.html">退出</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <div class="card">
+            <div class="photo"><img src="../img/li.jpg" alt=""></div>
+            <h1>立花泷</h1>
+            <h2>《你的名字》中的男主角</h2>
+            <p>住在东京中心的男高中生，每天都与朋友愉快地度日。后来与宫水三叶交换身体后逐渐相知、相恋，并共同拯救了三叶居住的小镇。</p>
+            <a href="../html/立花泷.html">了解更多</a>
+        </div>
+        <div class="card">
+            <div class="photo"><img src="../img/gong.jpg" alt=""></div>
+            <h1>宫水三叶</h1>
+            <h2>《你的名字》的女主角</h2>
+            <p>在睡梦中不经意地与立花游交换身体,与游逐渐相知、相恋,两人经过努力拯救了因彗星坠落即将毁灭的小镇.于2023年再次相遇。</p>
+            <a href="../html/宫水三叶.html">了解更多</a>
+        </div>
+        <div class="card">
+            <div class="photo"><img src="../img/ye.jpg" alt=""></div>
+            <h1>名取早耶香</h1>
+            <h2>三叶的同级生</h2>
+            <p>暗恋着救使河原克彦。姐姐在镇公所担当广播的工作。原来死于限石，被救后和青梅竹马的救使河原克彦终成卷属。</p>
+            <a href="../html/名取早耶香.html">了解更多</a>
+        </div>
+    </div>
+</body>
+<script src="../layui/layui.js"></script>
+
+</html>

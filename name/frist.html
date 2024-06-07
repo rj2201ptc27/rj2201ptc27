@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            width: 100%;
+            height: 200px;
+            background-color: rgb(237, 235, 239);
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .header-r {
+            height: 30px;
+            background-color: bisque;
+        }
+
+        .header-l {
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-l button {
+            width: 80px;
+            height: 40px;
+            margin: 15px;
+            border: 2px dashed #7242e3;
+        }
+
+        .bigbox {
+            display: flex;
+            justify-content: center;
+        }
+        .bigbox1{
+            width: 520px;
+            height: 600px;
+            background-color: #c5a6a6;
+        }
+        .individual{
+            width: 520px;
+            height: 60px;
+            background-color: antiquewhite;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* label文本自动换行 */
+            /* white-space: pre-wrap; */
+        }
+        .center-box{
+            margin-top: 20px;
+        }
+        .individual-left{
+            width: 100px;
+            height: 400px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-r">
+            <p>健身管理系统</p>
+        </div>
+        <div class="header-l">
+            <button>首页</button>
+            <button>健身项目</button>
+            <button>健身咨询</button>
+            <button>个人中心</button>
+            <button>后台管理</button>
+        </div>
+    </div>
+    <div class="bigbox">
+        <div class="bigbox1">
+            <div class="individual">
+                <label>USER/CENTER</label>
+                <label>个人中心</label>
+            </div>
+        <div class="center-box">
+            <div class="individual-left">
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>

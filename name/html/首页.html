@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <audio id="vd">
+        <source src="../music/mp1.MP3" type="audio/mpeg">
+    </audio>
+</head>
+<link rel="stylesheet" href="../less/t1.css">
+<link rel="stylesheet" href="../bootstrap-3.4.1-dist/css/bootstrap.min.css">
+<body>
+
+<div id="bj1">
+    <div>
+        <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="">首页</a></li>
+            <li role="presentation"><a href="../html/剧情介绍.html">剧情介绍</a></li>
+            <li role="presentation"><a href="../html/人物卡片.html">人物介绍</a></li>
+            <li role="presentation"><a href="../html/音乐.html">音乐</a></li>
+            <li role="presentation"><a href="../html/图片欣赏.html">图片欣赏</a></li>
+            <li role="presentation"><a href="../html/作者.html">作者</a></li>
+        </ul>
+    </div>
+    <div class="bj2">
+        <p>君の名は</p>
+    </div>
+</div>
+</body>
+<script src="../jquery-3.5.1/jquery-3.5.1.min.js"></script>
+<script src="../bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    window.onload = function(){
+        setInterval("toggleSound()",100);
+    }
+
+    function toggleSound() {
+        var music = document.getElementById("vd");//获取ID
+
+        if (music.paused) { //判读是否播放
+            music.paused=false;
+            music.play(); //没有就播放
+        }
+    }
+</script>
+
+</html>

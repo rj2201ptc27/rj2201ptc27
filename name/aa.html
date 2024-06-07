@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .center {
+      width: 450px;
+      height: 500px;
+      /* background-color: rgb(117, 56, 175); */
+      position: absolute;
+      left: 50%;
+      margin-left: -225px;
+      top: 50%;
+      margin-top: -250px;
+      background: linear-gradient(to right bottom,
+          rgba(255, 255, 255, .7),
+          rgba(255, 255, 255, .5),
+          rgba(255, 255, 255, .4));
+      border-radius: 15px;
+      /* 使背景墙模糊化 */
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px #6a6792;
+      border-radius: 12px;
+    }
+    .box{
+      margin-left: -25px;
+    }
+    .wenben {
+      text-align: center;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .ipt {
+      width: 420px;
+      text-align: center;
+      margin: 11px;
+      display: flex;
+      align-items: center;
+    }
+
+    .ipt label {
+      flex: 1;
+      font-size: 16px;
+      text-align: right;
+      margin-right: 10px;
+    }
+
+    .ipt input {
+      flex: 2;
+      width: 350px;
+      height: 30px;
+      outline: none;
+      margin-left: 10px;
+      border-radius: 5px;
+      border: 1px solid #6a6792;
+    }
+
+    .btn{
+      width: 100px;
+      height: 45px;
+      background-color: rgb(118, 118, 231);
+      border: 0px;
+      border-radius: 5px;
+      margin-top: 25px;
+      margin-left: 120px;
+    }
+    .btn1{
+      width: 100px;
+      height: 45px;
+      background-color: rgb(118, 118, 231);
+      border: 0px;
+      border-radius: 5px;
+      margin-left: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <img style="width: 100%; height: 800px;" src="../aa.jpg" />
+    <div class="center">
+      <p class="wenben">健身房账号注册</p>
+      <div class="box">
+        <div class="ipt">
+          <label>用户名：</label>
+          <input type="text" placeholder="请输入用户名">
+        </div>
+        <div class="ipt">
+          <label>密码：</label>
+          <input type="text" placeholder="请输入密码">
+        </div>
+        <div class="ipt">
+          <label>确认密码：</label>
+          <input type="text" placeholder="请确认密码">
+        </div>
+        <div class="ipt">
+          <label>年龄：</label>
+          <input type="text" placeholder="请输入年龄">
+        </div>
+        <div class="ipt">
+          <label>性别：</label>
+          <input type="text" placeholder="请输入性别">
+        </div>
+        <div class="ipt">
+          <label>联系电话：</label>
+          <input type="text" placeholder="请输入联系电话">
+        </div>
+        <div class="ipt">
+          <label>验证码：</label>
+          <input type="text" placeholder="请输入验证码">
+        </div>
+      </div>
+      <div>
+        <button class="btn">注册</button>
+        <button class="btn1">取消</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
